@@ -175,7 +175,35 @@
                     }
                 }
             }
-        }
+        },
+        {
+            "name": "microsoft.custom-script-linux-20210417212335",
+            "apiVersion": "2015-01-01",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+                "mode": "incremental",
+                "templateLink": {
+                    "uri": "https://catalogartifact.azureedge.net/publicartifactsmigration/microsoft.custom-script-linux-arm.2.0.56/Artifacts/MainTemplate.json"
+                },
+                "parameters": {
+                    "vmName": {
+                        "value": "[parameters('virtualMachineName')]"
+                    },
+                    "location": {
+                        "value": "[parameters('location')]"
+                    },
+                    "fileUris": {
+                        "value": ["https://raw.githubusercontent.com/arnefromsa/openvpn-cloud-install/master/openvpn-install.sh"]
+                    },
+                    "commandToExecute": {
+                        "value": "sudo ./openvpn-install.sh"
+                    }
+                }
+            },
+            "dependsOn": [
+                "[concat('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
+            ]
+        }        
     ],
     "outputs": {
         "adminUsername": {

@@ -10,7 +10,7 @@ do
     Write-Host "========== OpenVPN Cloud Installer =========="
     Write-Host "What Cloud Provider are you targeting ?"
     Write-Host "1 : Azure"
-    Write-Host "2 : Amazon Web Services(AWS)"
+    Write-Host "2 : Amazon Web Services(AWS) - not available"
     $selection = Read-Host "Please make a selection: "
     switch ($selection)
      {
