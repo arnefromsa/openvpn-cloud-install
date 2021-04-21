@@ -17,7 +17,7 @@ Execute the powershell script
 ```
 ./infrastructure-setup.ps1
 ```
-The script will notify you that it is about to log into Azure via the browser.  Log into your Azure account, where your subscriptions will be loaded, where you can select the subscription you wish to use.
+The script will notify you that it is about to log into Azure via the browser.  Log into your Azure account, where your subscriptions will be loaded, where you can select the subscription you wish to use. 
 
 ### Architecture
 
